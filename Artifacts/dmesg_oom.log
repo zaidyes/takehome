@@ -1,0 +1,15 @@
+[84291.327104] memory cgroup out of memory: Killed process 48291 (python3) total-vm:823040kB, anon-rss:131072kB, file-rss:8412kB, shmem-rss:0kB
+[84291.327118] oom-kill:constraint=CONSTRAINT_MEMCG,nodemask=(null),cpuset=ebpf-agent,mems_allowed=0,oom_memcg=/docker/a3f7c8e91b2d,task_memcg=/docker/a3f7c8e91b2d
+[84291.327125] Memory cgroup stats for /docker/a3f7c8e91b2d:
+                 anon 134217728 (128MB limit reached)
+                 file 8613888
+                 kernel 1048576
+                 shmem 0
+[84291.327131] Tasks state (memory values in pages):
+               [  pid  ]   uid  tgid total_vm      rss pgtables_bytes swapents oom_score_adj name
+               [  48291]     0 48291   205760    34122   675840        0           0 python3
+[84291.327148] oom_reaper: reaped process 48291 (python3), now anon-rss:0kB, file-rss:0kB, shmem-rss:0kB
+[84298.514207] memory cgroup out of memory: Killed process 48355 (python3) total-vm:823040kB, anon-rss:131072kB, file-rss:8412kB, shmem-rss:0kB
+[84298.514221] oom-kill:constraint=CONSTRAINT_MEMCG,nodemask=(null),cpuset=ebpf-agent,mems_allowed=0,oom_memcg=/docker/a3f7c8e91b2d,task_memcg=/docker/a3f7c8e91b2d
+[84305.881034] memory cgroup out of memory: Killed process 48402 (python3) total-vm:823040kB, anon-rss:131072kB, file-rss:8412kB, shmem-rss:0kB
+[84305.881048] oom-kill:constraint=CONSTRAINT_MEMCG,nodemask=(null),cpuset=ebpf-agent,mems_allowed=0,oom_memcg=/docker/a3f7c8e91b2d,task_memcg=/docker/a3f7c8e91b2d
