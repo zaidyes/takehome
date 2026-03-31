@@ -1,0 +1,20 @@
+# docker-compose.yml
+# =====================================================================
+# Simulates a Kubernetes DaemonSet with a memory limit set based on
+# dev-environment sizing (128MB).  On a machine with 4+ CPUs, the
+# agent will exceed this limit and be OOMKilled — just like a real
+# customer deployment where resource limits were copy-pasted from
+# a staging manifest.
+# =====================================================================
+
+services:
+  ebpf-agent:
+    build: .
+    container_name: ebpf-agent
+    mem_limit: 128m        # Deliberately undersized — this is the bug
+    memswap_limit: 128m    # Prevent swap from masking the issue
+    restart: on-failure     # Simulates K8s restart policy → CrashLoopBackOff
+    deploy:
+      resources:
+        limits:
+          memory: 128M
